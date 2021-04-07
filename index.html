@@ -21,26 +21,27 @@
     <body>
 
         <header>
-            <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
-                
+            <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+
                 <div class="container">
-                    <a class="nav-brand" href="./index.html">
+                    <a class="nav-brand brand nav-item navbar-text" href="./index.html">
                         Font-Art Damian Pisarski
                     </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="nav navbar-nav">                 
+                <div class="container justify-content-center">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav flex-column flex-sm-row d-flex">                 
                             <li class="nav-item">
-                                <a class="nav-link" href="./index.html">HOME</a>
+                                <a class="nav-link mx-md-3 mx-sm-1 text-center" href="./index.html#oferta">OFERTA</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./index.html#oferta">OFERTA</a>
+                                <a class="nav-link mx-md-3 mx-sm-1 text-center" href="./index.html#realizacje">REALIZACJE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./index.html#realizacje">REALIZACJE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./index.html#kontakt">KONTAKT</a>
+                                <a class="nav-link mx-md-3 mx-sm-1 text-center" href="./index.html#kontakt">KONTAKT</a>
                             </li>                                    
                         </ul>
                     </div>
@@ -49,57 +50,56 @@
             </nav>
         </header>
 
-
-        <div id="home">
-
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div id="carouselExampleCaptions" class="carousel slide pt-5 " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="./images/background1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./images/background1.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./images/background2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block" >
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
                     </div>
-                    <div class="carousel-item">
-                        <img src="./images/background2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/background3.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="./images/background3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <section id="oferta" >
+        <div id="home">
+
+            <section id="oferta" class="home">
                 <div class="container py-5">
-                    <div class="row">
-                        <p>
+                    <div class="row pb-3 pt-2">
+                        <p><em>
                             Lorem ipsum dolor sit amet, id mazim accumsan sea, pri elaboraret ullamcorper ex, stet utinam mel et. Te alii iisque nec, ea adolescens sadipscing has. Lorem choro tation has eu, virtute patrioque in pri. Detracto omittantur te sed, sed cu lorem assum tibique, at facer falli timeam qui. Gubergren consetetur id ius, tempor voluptatum ad pri. Timeam singulis salutandi mei cu, eu purto blandit voluptatibus has.
-                        </p>
+                        </em></p>
                     </div>
                     <div class="row bg-dark text-white-50 justify-content-center">
-                        <h3 class="col-10 text-center py-3">OFERTA</h3>                        
+                        <h3 class="col-10 text-center pt-5">OFERTA</h3>                        
                     </div>
-                    <div class="row bg-dark text-white-50 justify-content-center">
-                        <div class="col-5 ">
+                    <div class="row bg-dark text-white-50 justify-content-center py-5">
+                        <div class="col-sm-5 col-12">
                             <p>
                                 No dolores referrentur eos, te vis mutat aperiri incorrupte, has eligendi probatus eu. Ius no decore deserunt. Duo case voluptatum ullamcorper ea, labores dolorem usu ea, quo semper menandri salutatus id. Nec quis nostrud pertinax ut, causae postulant eum ex.
                             </p>
                         </div>
-                        <div class="col-5 bg-dark text-white-50">
+                        <div class="col-sm-5 col-12">
                             <p>
                                 Id sea saepe persequeris, id has graece veritus, aeterno epicurei intellegebat ex nam. Eu vivendo disputando eam, erat elitr bonorum nam eu. Lobortis scripserit consectetuer mea ea. Mei delenit lucilius an. Illud atqui suscipiantur no mel.
                             </p>
@@ -110,13 +110,13 @@
             </section>
 
             <section id="realizacje" class="bg-dark text-white-50">
-                <div class="container py-5">
+                <div class="container py-5 home">
                     <div class="row">
                         <h3 class="text-center py-3">REALIZACJE</h3>
                     </div>
     
-                    <div class="row pictures-container">
-                        <div class="col-4">
+                    <div class="row pictures-container justify-content-center">
+                        <div class="col-md-4 col-12 my-2 portfolio-home">
                             <div class="hovereffect">
                                 <img class="img-responsive img-fluid" src="./images/rezba.jpg" alt="rezba">
                                     <div data-filter="sculptures" class="overlay">
@@ -126,8 +126,8 @@
                             </div>
                         </div>
 
-                        <div class="col-4">
-                            <div class="hovereffect">
+                        <div class="col-md-4 col-12 my-2 portfolio-home">
+                            <div class="hovereffect ">
                                 <img class="img-responsive img-fluid" src="./images/architektura.jpg" alt="architektura">
                                     <div data-filter="architecture" class="overlay">
                                         <h2></h2>
@@ -135,7 +135,8 @@
                                     </div>
                             </div>
                         </div>
-                        <div class="col-4">
+
+                        <div class="col-md-4 col-12 my-2 portfolio-home">
                             <div class="hovereffect">
                                 <img class="img-responsive img-fluid" src="./images/nagrobek.jpg" alt="nagrobek">
                                     <div  data-filter="tombs" class="overlay">
@@ -145,13 +146,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <a class="text-white-50" href="./portfolio.html">Zobacz wszystkie...</a>
+                    <div class="row text-center my-2">
+                        <a class="text-white-50" href="./portfolio.html">zobacz wszystkie...</a>
                     </div>
                 </div>                           
             </section>
 
-            <section id="kontakt">
+            <section id="kontakt" class="home">
                 <div class="container py-5">
                     <div class="row">
                         <h3 class="text-center py-3">KONTAKT</h3>

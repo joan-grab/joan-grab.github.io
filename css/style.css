@@ -7,12 +7,28 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.brand {
+    font-weight: bold;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #FFF !important;
+}
+
+.home {
+    max-width: 860px;
+    margin: auto;
+}
+
 h3 {
     letter-spacing: 0.2em;
 }
 
 p {
     text-align: justify;
+}
+
+.portfolio-home {
+    max-width: 300px;
 }
 
 /* realiacje - home page */
