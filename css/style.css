@@ -219,7 +219,7 @@ p {
       letter-spacing: 1px;
       margin-bottom: 0;
   }
-  .portfolio-content > a {
+  /* .portfolio-content > a {
       line-height: 42px;
       width: 40px;
       height: 40px;
@@ -229,7 +229,7 @@ p {
       text-align: center;
       margin-bottom: 15px;
       font-weight: 800;
-  }
+  } */
   .portfolio-wrapper:hover .portfolio-overlay {
       background-color: rgba(0, 0, 0, 0.6);
   }
