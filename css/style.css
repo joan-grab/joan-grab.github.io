@@ -27,6 +27,10 @@ p {
     text-align: justify;
 }
 
+#portfolio {
+    min-height: 89vh;
+}
+
 .portfolio-home {
     max-width: 300px;
 }
@@ -42,6 +46,7 @@ p {
     text-align: center;
     cursor: default;
     background: #000000;
+    cursor: pointer;
   }
   
   .hovereffect .overlay {
@@ -161,15 +166,19 @@ p {
       top: 0;
       height: 100%;
       width: 100%;
+      -webkit-transition: all 500ms ease;
       transition: all 500ms ease;
   }
   .portfolio-wrapper .portfolio-image img {
+      -webkit-transform: scale(1.2);
       transform: scale(1.2);
       will-change: transform;
+      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
       width: 100%;
   }
   .portfolio-wrapper:hover .portfolio-image img {
+      -webkit-transform: none;
       transform: none;
   }
   .portfolio-overlay:before {
@@ -182,7 +191,9 @@ p {
       border: 1px solid rgba(255, 255, 255, 1);
       content: "";
       opacity: 0;
+      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
+      -webkit-transform: scale(0.85);
       transform: scale(0.85);
   }
   .portfolio-overlay .portfolio-content {
@@ -225,10 +236,13 @@ p {
   .portfolio-wrapper:hover .portfolio-overlay:before {
       opacity: 1;
       visibility: visible;
+      -webkit-transform: none;
       transform: none;
   }
   .portfolio-wrapper:hover .portfolio-overlay .portfolio-content {
+      -webkit-transform: translateY(50%);
       transform: translateY(50%);
+      -webkit-transition: transform 0.5s ease;
       transition: transform 0.5s ease;
       opacity: 1;
   }

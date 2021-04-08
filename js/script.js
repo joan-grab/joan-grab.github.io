@@ -1,3 +1,5 @@
+
+
 $(function(){
     if ($(".pictures-container").length) {
         $(".pictures-container").on("click", ".overlay", function () {
