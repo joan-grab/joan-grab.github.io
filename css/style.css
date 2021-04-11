@@ -339,6 +339,7 @@ p {
     .portfolio-wrapper .overlayMobileNone:before {
         animation: portfolioHoverOverlayBefore 0.5s ease reverse backwards;
       }
+
   }
 
   @media (pointer: coarse) {
