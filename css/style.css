@@ -71,12 +71,31 @@ p {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  
-  .hovereffect:hover img {
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+
+  @media (pointer: fine) {
+    .hovereffect:hover img {
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+  }
+
+  @keyframes homeHoverImg {
+      from {opacity: 1; filter: alpha(opacity=100); transform: translate3d(-10px,0,0); -webkit-transform: translate3d(-10px,0,0);}
+      to {opacity: 0.4; filter: alpha(opacity=40); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+  }
+
+  @media (pointer: coarse) {
+    .hovereffect .imgMobileNone {
+        animation: homeHoverImg 0.35s reverse backwards;
+    }
+  }
+
+  @media (pointer: coarse) {
+    .hovereffect .imgMobile {
+        animation: homeHoverImg 0.35s normal forwards;
+    }
   }
   
   .hovereffect h2 {
@@ -104,10 +123,30 @@ p {
     transform: translate3d(-100%,0,0);
   }
   
-  .hovereffect:hover h2:after {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+  @media (pointer: fine) {
+    .hovereffect:hover h2:after {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
   }
+
+  @keyframes homeHoverH2After {
+      from {transform: translate3d(-100%,0,0); -webkit-transform: translate3d(-100%,0,0);}
+      to {transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+  }
+
+  @media (pointer: coarse) {
+    .hovereffect .h2MobileNone:after {
+        animation: homeHoverH2After 0.35s reverse both;
+    } 
+  }
+
+  @media (pointer: coarse) {
+    .hovereffect .h2Mobile:after {
+        animation: homeHoverH2After 0.35s normal forwards;
+    } 
+  }
+
   
   .hovereffect p {
     color: #FFF;
@@ -128,29 +167,39 @@ p {
     margin: 50px 0 0 0;
     background-color: transparent;
   }
-  
-  .hovereffect:hover p {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+
+  @media (pointer: fine) {
+    .hovereffect:hover p {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+      }
   }
 
+  @keyframes homeHoverP {
+      from {opacity: 0; filter: alpha(opacity=0); transform: translate3d(100%,0,0); -webkit-transform: translate3d(100%,0,0);}
+      to {opacity: 1; filter: alpha(opacity=100); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+  }
 
+  @media (pointer: coarse) {
+    .hovereffect .pMobileNone {
+        animation: homeHoverP 0.35s reverse backwards;
+      }
+  }
+
+  @media (pointer: coarse) {
+    .hovereffect .pMobile {
+        animation: homeHoverP 0.35s normal forwards;
+      }
+  }
+  
 /* realiacje - porfolio page */
 
   .filtering span {
       border-bottom: 2px solid transparent;
       cursor: pointer;
-      /* font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 1px; */
-      /* margin-right: 20px; */
       display: inline-block;
-      /* margin-bottom: 5px; */
-  }
-  .filtering span:last-child {
-      margin: 0;
   }
   .filtering .active {
       border-color: white;
@@ -177,10 +226,33 @@ p {
       transition: all 0.5s ease;
       width: 100%;
   }
-  .portfolio-wrapper:hover .portfolio-image img {
-      -webkit-transform: none;
-      transform: none;
+
+  @media (pointer: fine) {
+    .portfolio-wrapper:hover .portfolio-image img {
+        -webkit-transform: none;
+        transform: none;
+    }
   }
+
+  @keyframes portfolioHoverImg {
+      from {    -webkit-transform: scale(1.2);
+                transform: scale(1.2);}
+      to {      -webkit-transform: none;
+                transform: none;}
+  }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .imgPMobileNone {
+        animation: portfolioHoverImg 0.5s ease reverse backwards;
+      }
+  }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .imgPMobile {
+        animation: portfolioHoverImg 0.5s ease normal forwards;
+      }
+  }
+
   .portfolio-overlay:before {
       position: absolute;
       display: inline-block;
@@ -219,33 +291,94 @@ p {
       letter-spacing: 1px;
       margin-bottom: 0;
   }
-  /* .portfolio-content > a {
-      line-height: 42px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      color: #FFF;
-      display: inline-block;
-      text-align: center;
-      margin-bottom: 15px;
-      font-weight: 800;
-  } */
-  .portfolio-wrapper:hover .portfolio-overlay {
-      background-color: rgba(0, 0, 0, 0.6);
+
+  @media (pointer: fine) {
+    .portfolio-wrapper:hover .portfolio-overlay {
+        background-color: rgba(0, 0, 0, 0.6);  
+    }
   }
-  .portfolio-wrapper:hover .portfolio-overlay:before {
-      opacity: 1;
-      visibility: visible;
-      -webkit-transform: none;
-      transform: none;
+
+  @keyframes portfolioHoverOverlay {
+      from {background-color: none;}
+      to {background-color: rgba(0, 0, 0, 0.6);}
   }
-  .portfolio-wrapper:hover .portfolio-overlay .portfolio-content {
-      -webkit-transform: translateY(50%);
-      transform: translateY(50%);
-      -webkit-transition: transform 0.5s ease;
-      transition: transform 0.5s ease;
-      opacity: 1;
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .overlayMobileNone {
+        animation: portfolioHoverOverlay 0.5s ease reverse backwards;
+      }
   }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .overlayMobile {
+        animation: portfolioHoverOverlay 0.5s ease normal forwards;
+      }
+  }
+
+  @media (pointer: fine) {
+    .portfolio-wrapper:hover .portfolio-overlay:before {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: none;
+        transform: none;
+    }
+  }
+
+  @keyframes portfolioHoverOverlayBefore {
+      from {    opacity: 0;
+                visibility: hidden;
+                -webkit-transform: scale(0.85);
+                transform: scale(0.85);}
+      to {      opacity: 1;
+                visibility: visible;
+                -webkit-transform: none;
+                transform: none;}
+  }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .overlayMobileNone:before {
+        animation: portfolioHoverOverlayBefore 0.5s ease reverse backwards;
+      }
+
+  }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .overlayMobile:before {
+        animation: portfolioHoverOverlayBefore 0.5s ease normal forwards;
+      }
+  }
+
+  @media (pointer: fine) {
+    .portfolio-wrapper:hover .portfolio-overlay .portfolio-content {
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+        opacity: 1;
+    }
+  }
+
+  @keyframes portfolioHoverContent {
+      from {    -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+                opacity: 0;}
+      to {      -webkit-transform: translateY(50%);
+                transform: translateY(50%);
+                opacity: 1;}
+  }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .contentMobileNone {
+        animation: portfolioHoverContent 0.5s ease reverse backwards;
+      }
+  }
+
+  @media (pointer: coarse) {
+    .portfolio-wrapper .contentMobile {
+        animation: portfolioHoverContent 0.5s ease normal forwards;
+      }
+  }
+
   @media screen and (max-width: 1199px) {
       .portfolio-content h4 {
           font-size: 18px;
@@ -257,9 +390,6 @@ p {
       }
       .portfolio-content p {
           font-size: 15px;
-      }
-      .portfolio-content > a {
-          margin-bottom: 10px;
       }
   }
   @media screen and (max-width: 767px) {
